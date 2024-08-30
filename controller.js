@@ -49,7 +49,7 @@ function acessar() {
     let loginSenha = document.getElementById("loginSenha").value;
  
     // Verifica se os campos estão preenchidos
-    if (!loginEmail || !loginSenha ) {
+    if (!loginEmail || !loginSenha) {
         // Se algum campo estiver vazio, exibe um alerta
         alert("Favor preencher todos os campos");
     } else {
@@ -69,7 +69,9 @@ function salvarUser() {
     let emailUser = document.getElementById("emailUser").value;
     let CPFUser = document.getElementById("CPFUser").value;
  
-    if (emailUser === "" || emailUser.indexOf('@') === -1 || emailUser.indexOf('.') === -1) {
+    if (!nomeUser) {
+        alert("Informe o nome de Usuário");
+    } else if (emailUser === "" || emailUser.indexOf('@') === -1 || emailUser.indexOf('.') === -1) {
         alert("Informe um e-mail válido");
     } else if (nomeUser && emailUser && validarCPF(CPFUser)) {
         dadosLista.push(nomeUser);

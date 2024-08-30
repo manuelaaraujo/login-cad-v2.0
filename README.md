@@ -1,71 +1,53 @@
-# PROJETO LOGIN CAD V2.0
+ # LOGIN - CAD V2.0
 
-### ÍNDICE 
-
+* [Atualizações](#atualizações)
 * [Introdução](#introdução)
 * [Descrição](#descrição)
 * [Funcionalidades](#funcionalidades)
-* [Fontes](#fontes)
-* [Autor](#autor)
+* [Referências](#referências)
+* [Autores](#autores)
 
+## Atualizações
+Este projeto é uma versão aprimorada do [LOGIN CAD v2](https://github.com/manuelaaraujo/login-cad-v2) .
+Corrigimos problemas encontrados na versão anterior e introduzimos melhorias significativas na tela de cadastro. Agora, os usuários podem adicionar um novo e-mail, além de salvar, editar ou excluir registros. Também implementamos uma validação para o campo de CPF.
 
-## `Introdução`  
-Este projeto é uma versão melhorada e aprimorada de [LOGIN CAD v2](https://github.com/manuelaaraujo/login-cad-v2), onde arrumamos erros do antigo trabalho, que tinha como objetivo adicionar avanços na tela de cadastro permitindo que o usuário consiga adicionar um novo Email, salvar, editar ou exclui-lo. Também adicionamos uma melhoria que permite agora preencher o campo de CPF, validando o mesmo. 
+## Introdução
+O projeto é um sistema básico de login e cadastro de usuários, criado com JavaScript, HTML e CSS.
+ Seu objetivo é oferecer uma interface intuitiva onde os usuários podem se registrar com seus nomes e, posteriormente, visualizar, modificar ou remover suas informações.
 
-## `Descrição`
+## Descrição
+Este sistema é uma aplicação web simples desenvolvida com HTML, CSS e JavaScript. Ele permite que os usuários façam login e cadastrem seus nomes, oferecendo uma interface amigável e eficiente para a manipulação dos dados.
 
-### O QUE É O ``ARRAY``?
+## Funcionalidades
 
-Um array é um conjunto de valores ordenados que você o referencia com um nome e um índice. Por exemplo, você pode ter um array chamado emp que contém nomes de funcionários indexados por seus números de funcionários.
+``Tela de Login:`` Os usuários acessam uma tela de login onde devem fornecer e-mail e senha. O sistema verifica se ambos os campos estão preenchidos e, se estiverem, redireciona o usuário para a tela de cadastro.
 
-     `ARRAY.SPLICE` O método splice() altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos. Índice o qual deve iniciar a alterar a lista. Se maior que o tamanho total da mesma, nenhum elemento será alterado. Se negativo, irá iniciar a partir daquele número de elementos a partir do fim.
+``Cadastro de Usuários:`` Na tela de cadastro, os usuários podem inserir seus nomes, que serão salvos em uma lista. Caso o campo esteja vazio, uma mensagem de alerta solicitará o preenchimento do nome.
 
-* TELA LOGIN
+``Gerenciamento da Lista de Nomes:`` Os usuários podem visualizar uma tabela com os nomes cadastrados. Cada nome na tabela possui botões para edição e exclusão:
 
-A função acessar() valida se os campos de email e senha estão preenchidos. Se algum campo estiver vazio, exibe um alerta. Caso contrário, redireciona o usuário para a página cadastro.html
+``Editar:`` Ao clicar no botão de editar, o nome selecionado é carregado no campo de entrada, permitindo ao usuário fazer alterações.
 
-* TELA CADASTRO 
+``Excluir:`` O botão de excluir remove o nome correspondente da lista.
 
- ``salvarUser()``: Adiciona o nome do usuário a um array (dadosLista) e atualiza uma tabela HTML com uma nova linha contendo o nome e botões para editar e excluir. Limpa o campo de entrada após adicionar o nome.`
+``Tela de Login:``
+O sistema começa com uma tela de login onde o usuário deve inserir e-mail e senha.
+Ao clicar no botão de login, o sistema valida se ambos os campos estão preenchidos. Se não estiverem, uma mensagem de alerta solicita o preenchimento dos campos.
+Se os campos estiverem preenchidos, o usuário é redirecionado para a tela de cadastro.
 
-``criarlista()``: Gera e exibe uma tabela HTML com os nomes armazenados no array dadosLista. Inclui botões para editar e excluir cada entrada.
+``Cadastro de Usuários:``
+Na tela de cadastro, o usuário pode inserir seu nome em um campo de texto.
+O sistema verifica se o campo está vazio. Se estiver, um alerta pede que o nome seja fornecido.
+Se o nome for preenchido, ele é armazenado em um array denominado ´´dadosLista´´, que mantém todos os nomes cadastrados.
+Alterações
+Os campos para inserir nome e e-mail foram adicionados, juntamente com um botão "SALVAR". Após preencher esses campos e clicar no botão, o nome e e-mail são adicionados à tabela exibida abaixo. Na tabela, existem botões para editar ou excluir os registros existentes.
 
-``editar(i)``: Permite editar um nome na lista. Preenche o campo de entrada com o nome selecionado e remove o nome do array.
-
-``excluir(i)``: Remove um nome da lista e da tabela HTML com base na posição fornecida.
-
-`DESCRIÇÃO DA NOVA ALTERAÇÃO FEITA NO PROJETO`
-
-![](img/email.png)
-
-Cria um array vazio chamado "salvaEmail" com o propósito de armazenar os endereços de e-mail dos usuários conforme eles são adicionados à lista.
-
-![](img/email2.png)
-
-Adiciona um novo endereço de e-mail ao final do array "salvaEmail". Isso ocorre na função salvarUser(), onde, após o usuário inserir o nome e o e-mail, o e-mail é armazenado no array para que possa ser exibido na tabela.
-
-![](img/email3.png)
-
-Esta linha define o valor do campo de entrada com id "emailUser" para o valor localizado no array "salvaEmail" no índice (i - 1). O que faz: Preenche o campo de entrada emailUser com o valor do item no índice (i - 1) do array salvaEmail.
-
-![](img/email4.png) 
-
- "deleteRow(i)" remove a linha da tabela com o índice i. Esse índice corresponde à linha da tabela que será removida.
-Remove um item do array salvaEmail. Usa o índice (i - 1) para determinar o ponto de início da remoção. O segundo argumento 1 especifica que um item deve ser removido a partir desse índice.
-
-## `Funcionalidades`
-
-O código permite a validação de login e o gerenciamento de uma lista de usuários, incluindo funcionalidades para adicionar, editar e excluir nomes.
-
-## `Fontes`
-
+## Referências
 [CHAT GPT](https://chatgpt.com/)
 
 [MDN WEB DOCS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections)
 
+## Autores
+https://github.com/LeonardoRochaMarista
 
-## `Autor`
-
-[Leonardo Rocha](https://github.com/LeonardoRochaMarista)
-
-[Manuela Araujo](https://github.com/manuelaaraujo)
+https://github.com/manuelaaraujo
